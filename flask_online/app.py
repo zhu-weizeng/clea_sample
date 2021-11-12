@@ -27,7 +27,6 @@ def predict():
         data = [jieba_cut_text(message, stopw)]
         vect = tfidf.transform(data)
         my_prediction = clf.predict(vect)
-        print(my_prediction)
     return render_template('result.html', prediction=my_prediction)
 
 
